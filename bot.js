@@ -1,3 +1,5 @@
+process.on('uncaughtException', console.error);
+process.on('unhandledRejection', console.error);
 const { 
 Client,
 GatewayIntentBits,
@@ -42,7 +44,7 @@ return "taobao"
 
 }
 
-client.on("ready", () => {
+client.on('clientReady', () => {
 console.log(`Bot działa jako ${client.user.tag}`)
 })
 
